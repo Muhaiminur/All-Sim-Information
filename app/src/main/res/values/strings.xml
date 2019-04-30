@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">All Sim Information</string>
+    <string name="sim_one_string">SIM1</string>
+    <string name="sim_two_string">SIM2</string>
+    <string name="balance_string">Balance Check</string>
+    <string name="customer_string">Customer Care Center</string>
+    <string name="internet_string">Latest Internet Offer</string>
+    <string name="data_string">Data (MB) Check</string>
+    <string name="minute_string">Minute Check</string>
+    <string name="sms_string">SMS Check</string>
+    <string name="mms_string">MMS Check</string>
+    <string name="net_setting_string">Net Setting Request</string>
+    <string name="miss_on_string">Miss Call Alert (On)</string>
+    <string name="miss_off_string">Miss Call Alert (Off)</string>
+    <string name="sim_num_string">Sim Number</string>
+    <string name="call_me_string">Call Me Back</string>
+    <string name="emergency_string">Emergency Balance (Loan)</string>
+
+    <!--GRAMMEN PHONE-->
+    <string name="gp_balance_string">*566#</string>
+    <string name="gp_customer_string">121</string>
+    <string name="gp_emergency_string">*1010*1#</string>
+    <string name="gp_internet_string">*444#</string>
+    <string name="gp_data_string">*121*1*4#</string>
+    <string name="gp_minute_string">*121*1*2#</string>
+    <string name="gp_sms_string">*121*1*2#</string>
+    <string name="gp_mms_string">*566*14#</string>
+    <string name="gp_net_setting_string">*500*50#</string>
+    <string name="gp_miss_on_string">Type START MCA and Send to 6222</string>
+    <string name="gp_miss_off_string">Type STOP MCA and Send to 6222</string>
+    <string name="gp_sim_num_string">*2#</string>
+    <string name="gp_call_me_string">*123*Number#</string>
+
+
+    <!--Robi-->
+    <string name="robi_balance_string">*222#</string>
+    <string name="robi_customer_string">123</string>
+    <string name="robi_emergency_string">*8#</string>
+    <string name="robi_internet_string">*123#</string>
+    <string name="robi_data_string">*3#</string>
+    <string name="robi_minute_string">*0#</string>
+    <string name="robi_sms_string">*222*11#</string>
+    <string name="robi_mms_string">*222*13#</string>
+    <string name="robi_net_setting_string">*123*3*1#</string>
+    <string name="robi_miss_on_string">Type ON and Send to 8272</string>
+    <string name="robi_miss_off_string">Type OFF and Send to 8272</string>
+    <string name="robi_sim_num_string">*2#</string>
+    <string name="robi_call_me_string">Not Available</string>
+
+
+    <!--Airtel-->
+    <string name="airtel_balance_string">*1#</string>
+    <string name="airtel_customer_string">121</string>
+    <string name="airtel_emergency_string">*141*10#</string>
+    <string name="airtel_internet_string">*4#</string>
+    <string name="airtel_data_string">*3#</string>
+    <string name="airtel_minute_string">*0#</string>
+    <string name="airtel_sms_string">*778*2#</string>
+    <string name="airtel_mms_string">*222*13#</string>
+    <string name="airtel_net_setting_string">*5#</string>
+    <string name="airtel_miss_on_string">*121*3*4#</string>
+    <string name="airtel_sim_num_string">*2#</string>
+    <string name="airtel_call_me_string">*121*5#</string>
+
+
+    <!--Banglalink-->
+    <string name="banglalink_balance_string">*124#</string>
+    <string name="banglalink_customer_string">121</string>
+    <string name="banglalink_emergency_string">*874#</string>
+    <string name="banglalink_internet_string">*888#</string>
+    <string name="banglalink_data_string">*124*5#</string>
+    <string name="banglalink_minute_string">*124*2#</string>
+    <string name="banglalink_sms_string">*124*3#</string>
+    <string name="banglalink_mms_string">*124*2#</string>
+    <string name="banglalink_net_setting_string">Type ALL and Sent to 3343</string>
+    <string name="banglalink_miss_on_string">Type START and Send to 622</string>
+    <string name="banglalink_miss_off_string">Type STOP and Send to 622</string>
+    <string name="banglalink_sim_num_string">*511#</string>
+    <string name="banglalink_call_me_string">*126*Number#</string>
+
+
+    <!--Teletalk PHONE-->
+    <string name="teletalk_balance_string">*152#</string>
+    <string name="teletalk_customer_string">121</string>
+    <string name="teletalk_emergency_string">*1122#</string>
+    <string name="teletalk_internet_string">*111#</string>
+    <string name="teletalk_data_string">*152#</string>
+    <string name="teletalk_minute_string">*152#</string>
+    <string name="teletalk_sms_string">*152#</string>
+    <string name="teletalk_mms_string">*152#</string>
+    <string name="teletalk_net_setting_string">Type set and Send to 738</string>
+    <string name="teletalk_miss_on_string">Type REG and Send to 2455</string>
+    <string name="teletalk_miss_off_string">Type CAN and Send to 245</string>
+    <string name="teletalk_sim_num_string">*551#</string>
+
+    <string name="homepage_banner">495671107635789_495676207635279</string>
+    <string name="homepage_intersteller">495671107635789_495675227635377</string>
+    <string name="gp_banner">495671107635789_495676484301918</string>
+    <string name="gp_native">495671107635789_495676724301894</string>
+    <string name="robi_banner">495671107635789_495676854301881</string>
+    <string name="robi_native">495671107635789_495677024301864</string>
+    <string name="airtel_banner">495671107635789_495678077635092</string>
+    <string name="banglalink_banner">495671107635789_495678354301731</string>
+    <string name="banglalink_native">495671107635789_495678504301716</string>
+    <string name="teletalk_banner">495671107635789_495678657635034</string>
+    <string name="teletalk_native">495671107635789_495678787635021</string>
+</resources>
