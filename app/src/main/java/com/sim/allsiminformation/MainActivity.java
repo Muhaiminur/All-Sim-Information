@@ -8,10 +8,12 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -29,6 +31,10 @@ import com.facebook.ads.AdView;
 import com.facebook.ads.AudienceNetworkAds;
 import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import java.lang.reflect.Method;
 
@@ -64,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
     private InterstitialAd interstitialAd;
     private final String TAG = MainActivity.class.getSimpleName();
 
+
+    private com.google.android.gms.ads.AdView google_ad;
+    private com.google.android.gms.ads.InterstitialAd google_inter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +103,91 @@ public class MainActivity extends AppCompatActivity {
 
         bannerad();
         interstellar();
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        google_ad = findViewById(R.id.google_banner);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        google_ad.loadAd(adRequest);
+        google_ad.setAdListener(new com.google.android.gms.ads.AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                // Code to be executed when an ad request fails.
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+        });
+
+        google_inter = new com.google.android.gms.ads.InterstitialAd(this);
+        google_inter.setAdUnitId("ca-app-pub-5458657085710972/9454371976");
+        google_inter.loadAd(new AdRequest.Builder().build());
+        if (google_inter.isLoaded()) {
+            google_inter.show();
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+        }
+        google_inter.setAdListener(new com.google.android.gms.ads.AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                // Code to be executed when an ad request fails.
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when the ad is displayed.
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the interstitial ad is closed.
+                google_inter.loadAd(new AdRequest.Builder().build());
+            }
+        });
+        showAdWithDelaygoogle();
     }
 
     @OnClick({R.id.gp, R.id.robi, R.id.airtel, R.id.banglalink, R.id.teletalk})
@@ -366,5 +461,22 @@ public class MainActivity extends AppCompatActivity {
         }
         //Log.i("Reflection", "Result: " + result);
         return result;
+    }
+
+    private void showAdWithDelaygoogle() {
+        /**
+         * Here is an example for displaying the ad with delay;
+         * Please do not copy the Handler into your project
+         */
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                if (google_inter.isLoaded()) {
+                    google_inter.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
+            }
+        }, 1000); // Show the ad after 15 minutes
     }
 }
