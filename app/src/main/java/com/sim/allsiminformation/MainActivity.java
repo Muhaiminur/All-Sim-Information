@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         google_inter = new com.google.android.gms.ads.InterstitialAd(this);
-        google_inter.setAdUnitId("ca-app-pub-5458657085710972/9454371976");
+        google_inter.setAdUnitId("ca-app-pub-2851562992535827/8506593131");
         google_inter.loadAd(new AdRequest.Builder().build());
         if (google_inter.isLoaded()) {
             google_inter.show();
